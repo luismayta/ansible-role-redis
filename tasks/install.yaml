@@ -1,0 +1,10 @@
+---
+- name: Installs redis server
+  become: true
+  package:
+    name=redis-server
+    state=present
+  notify:
+    - start redis-server
+  tags:
+    - redis

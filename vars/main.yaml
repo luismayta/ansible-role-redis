@@ -1,0 +1,9 @@
+---
+# vars file for redis
+
+_redis_dir_etc: '/etc/redis'
+
+_redis:
+  templates:
+    - src: "redis.conf.j2"
+      dest: "{{ _redis_dir_etc }}/redis.conf"
